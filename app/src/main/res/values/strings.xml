@@ -10,4 +10,6 @@
     <string name="end_at">End At::</string>
     <string name="end_att">End At:</string>
     <string name="add_course">Add Course</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
 </resources>

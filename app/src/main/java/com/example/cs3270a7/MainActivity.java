@@ -1,44 +1,29 @@
 package com.example.cs3270a7;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-
-import com.example.cs3270a7.db.AppDatabase;
-import com.example.cs3270a7.db.Course;
-
-import java.util.List;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
-    private CourseEditFragment courseEditFrag;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_1, courseEditFrag = new CourseEditFragment()).commit();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        new Thread(new Runnable() {
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                List<Course> courses = AppDatabase.getInstance(getApplicationContext())
-                        .courseDAO()
-                        .getAll();
-
-                for (Course c: courses)
-                {
-                    Log.d("Courses", "Course: " + c.toString());
-                }
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
-        }).start();
+        });
     }
-}
 
+}
