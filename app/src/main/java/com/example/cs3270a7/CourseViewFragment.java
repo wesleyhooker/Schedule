@@ -1,8 +1,10 @@
 package com.example.cs3270a7;
 
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -29,12 +31,13 @@ import com.example.cs3270a7.db.Course;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CourseViewFragment extends DialogFragment {
+public class CourseViewFragment extends DialogFragment implements DeleteConfirmationDialog.MyDialogCloseListener {
     //VARS
     private TextInputEditText edtID, edtName, edtCourseCode, edtStartAt, edtEndAt;
     private Button btnSaveCourse;
     private View root;
     private Course course;
+
 
     //PROPERTIES
     public void setCourse(Course course) {
@@ -154,7 +157,9 @@ public class CourseViewFragment extends DialogFragment {
 
     private void delete()
     {
-
+        DeleteConfirmationDialog deleteConfirmationDialog = new DeleteConfirmationDialog();
+        deleteConfirmationDialog.setCourse(course);
+        deleteConfirmationDialog.show(getActivity().getSupportFragmentManager(), "deleteConfirmationDialog");
     }
 
     private void saveCourse()
@@ -174,6 +179,11 @@ public class CourseViewFragment extends DialogFragment {
             }
         }).start();
 
+        dismiss();
+    }
+
+    @Override
+    public void handleDialogClose() {
         dismiss();
     }
 }

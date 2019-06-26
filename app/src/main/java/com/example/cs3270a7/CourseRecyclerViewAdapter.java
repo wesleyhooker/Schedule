@@ -52,7 +52,7 @@ public class CourseRecyclerViewAdapter extends RecyclerView.Adapter<CourseRecycl
 
                     //SHOW
                     ((AppCompatActivity)context).getSupportFragmentManager()
-                            .beginTransaction().add(android.R.id.content, courseViewFragment)
+                            .beginTransaction().add(android.R.id.content, courseViewFragment, "courseViewFrag")
                             .addToBackStack(null)
                             .commit();
                 }

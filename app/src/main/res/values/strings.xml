@@ -17,4 +17,8 @@
     <string name="edit">Edit</string>
     <string name="save_course">Save Course</string>
     <string name="update_course">Update Course</string>
+    <string name="deleteCourse">Delete</string>
+    <string name="DeleteDialogMessage">This will permanently delete the course.</string>
+    <string name="DeleteDialogTitle">Delete Course?</string>
+    <string name="DeleteDialogNeg">Cancel</string>
 </resources>
