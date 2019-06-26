@@ -1,4 +1,4 @@
-package com.example.cs3270a7;
+package com.example.cs3270a8;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.cs3270a7.db.Course;
+import com.example.cs3270a8.db.Course;
 
 import java.util.ArrayList;
 import java.util.List;

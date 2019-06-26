@@ -1,11 +1,9 @@
-package com.example.cs3270a7.db;
+package com.example.cs3270a8.db;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
-
-import java.nio.file.attribute.UserDefinedFileAttributeView;
 
 @Database(entities = {Course.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {

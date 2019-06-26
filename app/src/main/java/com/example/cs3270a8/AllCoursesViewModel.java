@@ -1,11 +1,11 @@
-package com.example.cs3270a7;
+package com.example.cs3270a8;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
 import android.content.Context;
 
-import com.example.cs3270a7.db.AppDatabase;
-import com.example.cs3270a7.db.Course;
+import com.example.cs3270a8.db.AppDatabase;
+import com.example.cs3270a8.db.Course;
 
 import java.util.List;
 

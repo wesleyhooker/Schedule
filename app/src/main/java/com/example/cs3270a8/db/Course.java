@@ -1,4 +1,4 @@
-package com.example.cs3270a7.db;
+package com.example.cs3270a8.db;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;

@@ -1,4 +1,4 @@
-package com.example.cs3270a7;
+package com.example.cs3270a8;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.cs3270a7", appContext.getPackageName());
+        assertEquals("com.example.cs3270a8", appContext.getPackageName());
     }
 }
