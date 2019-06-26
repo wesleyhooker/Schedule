@@ -1,6 +1,7 @@
 package com.example.cs3270a7.db;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 @Entity
@@ -14,6 +15,15 @@ public class Course {
 
     public Course(Integer _id, String id, String name, String course_code, String start_at, String end_at) {
         this._id = _id;
+        this.id = id;
+        this.name = name;
+        this.course_code = course_code;
+        this.start_at = start_at;
+        this.end_at = end_at;
+    }
+
+    @Ignore
+    public Course(String id, String name, String course_code, String start_at, String end_at) {
         this.id = id;
         this.name = name;
         this.course_code = course_code;

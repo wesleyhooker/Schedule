@@ -75,6 +75,8 @@ public class CourseEditFragment extends Fragment {
                 courseCode.getText().clear();
                 startAt.getText().clear();
                 endAt.getText().clear();
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new CourseListFragment()).commit();
             }
         });
     }

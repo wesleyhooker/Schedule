@@ -1,5 +1,6 @@
 package com.example.cs3270a7.db;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -15,7 +16,7 @@ public interface CourseDAO {
     void insert(Course... courses);
 
     @Query("select * from Course")
-    List<Course> getAll();
+    LiveData<List<Course>> getAll();
 
     @Query("SELECT * FROM Course WHERE id = :id LIMIT 1")
     Course details(String id);
